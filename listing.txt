@@ -1,0 +1,69 @@
+.
+|-- Dockerfile
+|-- LICENSE.md
+|-- README.md
+|-- docs
+|   |-- class-diagram.puml
+|   `-- user-stories.md
+|-- listing.txt
+|-- pom.xml
+`-- src
+    |-- main
+    |   |-- java
+    |   |   `-- com
+    |   |       `-- acme
+    |   |           `-- catchup
+    |   |               `-- platform
+    |   |                   |-- CatchUpPlatformApplication.java
+    |   |                   |-- news
+    |   |                   |   |-- application
+    |   |                   |   |   `-- internal
+    |   |                   |   |       |-- commandservices
+    |   |                   |   |       |   `-- FavoriteSourceCommandServiceImpl.java
+    |   |                   |   |       `-- queryservices
+    |   |                   |   |           `-- FavoriteSourceQueryServiceImpl.java
+    |   |                   |   |-- domain
+    |   |                   |   |   |-- model
+    |   |                   |   |   |   |-- aggregates
+    |   |                   |   |   |   |   `-- FavoriteSource.java
+    |   |                   |   |   |   |-- commands
+    |   |                   |   |   |   |   `-- CreateFavoriteSourceCommand.java
+    |   |                   |   |   |   `-- queries
+    |   |                   |   |   |       |-- GetAllFavoriteSourcesByNewsApiKeyQuery.java
+    |   |                   |   |   |       |-- GetFavoriteSourceByIdQuery.java
+    |   |                   |   |   |       `-- GetFavoriteSourceByNewsApiKeyAndSourceIdQuery.java
+    |   |                   |   |   `-- services
+    |   |                   |   |       |-- FavoriteSourceCommandService.java
+    |   |                   |   |       `-- FavoriteSourceQueryService.java
+    |   |                   |   |-- infrastructure
+    |   |                   |   |   `-- persistence
+    |   |                   |   |       `-- jpa
+    |   |                   |   |           `-- FavoriteSourceRepository.java
+    |   |                   |   `-- interfaces
+    |   |                   |       `-- rest
+    |   |                   |           |-- FavoriteSourcesController.java
+    |   |                   |           |-- resources
+    |   |                   |           |   |-- CreateFavoriteSourceResource.java
+    |   |                   |           |   `-- FavoriteSourceResource.java
+    |   |                   |           `-- transform
+    |   |                   |               |-- CreateFavoriteSourceCommandFromResourceAssembler.java
+    |   |                   |               `-- FavoriteSourceResourceFromEntityAssembler.java
+    |   |                   `-- shared
+    |   |                       `-- infrastructure
+    |   |                           `-- persistence
+    |   |                               `-- jpa
+    |   |                                   `-- strategy
+    |   |                                       `-- SnakeCasePhysicalNamingStrategy.java
+    |   `-- resources
+    |       |-- application-dev.properties
+    |       |-- application-prod.properties
+    |       `-- application.properties
+    `-- test
+        `-- java
+            `-- com
+                `-- acme
+                    `-- catchup
+                        `-- platform
+                            `-- CatchUpPlatformApplicationTests.java
+
+38 directories, 28 files
